@@ -3,6 +3,7 @@ package src.structure;
 /**
  * @author zjn
  * @date 2022/6/10
+ * 单链表节点
  */
 public class ListNode {
     public int val;
