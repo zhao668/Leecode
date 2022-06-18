@@ -12,12 +12,12 @@ import java.util.Queue;
  * @date 2022/6/17
  */
 public class BinaryTreeLevelOrderTraversal {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> resList = new ArrayList<List<Integer>>();
         if (root == null) {
             return resList;
         }
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> itemList = new ArrayList<>();
@@ -37,6 +37,10 @@ public class BinaryTreeLevelOrderTraversal {
             resList.add(itemList);
         }
         return  resList;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(BinaryTreeLevelOrderTraversal.levelOrder(TreeNode.createBinaryTree(new Integer[] {3, 9, 20, null, null, 15, 7})));
     }
 }
 

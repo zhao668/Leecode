@@ -10,19 +10,23 @@ import java.util.List;
  * @date 2022/6/17
  */
 public class BinaryTreeInorderTraversal {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         inorder(root,res);
         return res;
     }
 
-    private void inorder(TreeNode root, List<Integer> res) {
+    private static void inorder(TreeNode root, List<Integer> res) {
         if (root == null) {
             return;
         }
         inorder(root.left, res);
         res.add(root.val);
         inorder(root.right, res);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(BinaryTreeInorderTraversal.inorderTraversal(TreeNode.createBinaryTree(new Integer[] {})));
     }
 }
 

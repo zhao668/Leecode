@@ -12,7 +12,7 @@ import java.util.Queue;
  * @date 2022/6/17
  */
 public class BinaryTreeRightSideView {
-    public List<Integer> rightSideView(TreeNode root) {
+    public static List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
@@ -36,6 +36,10 @@ public class BinaryTreeRightSideView {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(BinaryTreeRightSideView.rightSideView(TreeNode.createBinaryTree(new Integer[] {1, 2, 3, null, 5, null, 4})));
     }
 }
 

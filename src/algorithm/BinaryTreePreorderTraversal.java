@@ -10,13 +10,13 @@ import java.util.List;
  * @date 2022/6/17
  */
 public class BinaryTreePreorderTraversal {
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         preorder(root, result);
         return result;
     }
 
-    private void preorder(TreeNode root, List<Integer> result) {
+    private static void preorder(TreeNode root, List<Integer> result) {
         if (root == null) {
             return;
         }
@@ -25,6 +25,9 @@ public class BinaryTreePreorderTraversal {
         preorder(root.right, result);
     }
 
+    public static void main(String[] args) {
+        System.out.println(BinaryTreePreorderTraversal.preorderTraversal(TreeNode.createBinaryTree(new Integer[] {1, null, 2, 3})));
+    }
 }
 
 /**

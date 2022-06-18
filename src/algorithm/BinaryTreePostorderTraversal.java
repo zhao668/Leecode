@@ -10,19 +10,23 @@ import java.util.List;
  * @date 2022/6/17
  */
 public class BinaryTreePostorderTraversal {
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         postorder(root, result);
         return result;
     }
 
-    private void postorder(TreeNode root, List<Integer> result) {
+    private static void postorder(TreeNode root, List<Integer> result) {
         if (root == null) {
             return;
         }
         postorder(root.left, result);
         postorder(root.right, result);
         result.add(root.val);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(BinaryTreePostorderTraversal.postorderTraversal(TreeNode.createBinaryTree(new Integer[] {1, null, 2, 3})));
     }
 }
 
